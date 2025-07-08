@@ -72,7 +72,7 @@ const Discover = () => {
 
   return (
     <section className="w-full flex justify-center bg-[#f5f5ef] py-8">
-      <div className="w-full max-w-6xl bg-white rounded-2xl shadow p-8 flex flex-col items-center">
+      <div className="w-full max-w-7xl bg-white rounded-2xl shadow p-8 flex flex-col items-center">
         {/* Title */}
         <h2 className="text-4xl font-bold text-center mb-6 text-primary tracking-wide">Discover</h2>
         {/* Tabs */}
@@ -124,13 +124,13 @@ const Discover = () => {
                   <span className="text-lg font-bold text-primary">Rs. {product.price}.00</span>
                 </div>
                 {/* Add to Cart */}
-                <button className="mt-auto px-4 py-2 border-2 border-primary text-teal-900 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">ADD TO CART</button>
+                <button className="mt-auto px-4 py-2 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">ADD TO CART</button>
               </div>
             </div>
           ))}
         </div>
         {/* Shop All Button */}
-        <button className="px-8 py-2 bg-primary text-white rounded-lg font-bold text-lg tracking-wide shadow hover:bg-teal-800 transition-colors">SHOP ALL</button>
+        <button className="px-8 py-2 bg-primary text-white rounded-lg font-bold text-sm tracking-wide shadow hover:bg-teal-800 transition-colors">SHOP ALL</button>
         {/* Custom primary color utility */}
         <style>{`
           .text-primary { color: #134e4a !important; }

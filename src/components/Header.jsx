@@ -4,17 +4,17 @@ import { GiCow, GiMilkCarton, GiWheat, GiPeanut, GiOlive, GiHoneyJar } from 'rea
 import logo from '../assets/logo.jpg'
 
 const categories = [
-  { icon: <GiCow className="text-teal-900 text-2xl" />, label: 'All Products' },
-  { icon: <GiCow className="text-teal-900 text-2xl" />, label: 'A2 Gir Cow Ghee' },
-  { icon: <GiMilkCarton className="text-teal-900 text-2xl" />, label: 'A2 Gir Cow Milk' },
-  { icon: <GiWheat className="text-teal-900 text-2xl" />, label: 'Stone Ground Atta' },
-  { icon: <FaRupeeSign className="text-teal-900 text-2xl" />, label: 'Value Saver - Combos' },
-  { icon: <GiPeanut className="text-teal-900 text-2xl" />, label: 'Stone Ground Peanut butter' },
-  { icon: <GiOlive className="text-teal-900 text-2xl" />, label: 'Wood Press Oils' },
-  { icon: <GiHoneyJar className="text-teal-900 text-2xl" />, label: 'Natural Sweetener' },
-  { icon: <FaLeaf className="text-teal-900 text-2xl" />, label: 'Stone Ground Spices' },
-  { icon: <FaSeedling className="text-teal-900 text-2xl" />, label: 'Organic Pulses' },
-  { icon: <FaCookieBite className="text-teal-900 text-2xl" />, label: 'Healthy & Tasty Snacks' },
+  { icon: <GiCow className="text-primary text-2xl" />, label: 'All Products' },
+  { icon: <GiCow className="text-primary text-2xl" />, label: 'A2 Gir Cow Ghee' },
+  { icon: <GiMilkCarton className="text-primary text-2xl" />, label: 'A2 Gir Cow Milk' },
+  { icon: <GiWheat className="text-primary text-2xl" />, label: 'Stone Ground Atta' },
+  { icon: <FaRupeeSign className="text-primary text-2xl" />, label: 'Value Saver - Combos' },
+  { icon: <GiPeanut className="text-primary text-2xl" />, label: 'Stone Ground Peanut butter' },
+  { icon: <GiOlive className="text-primary text-2xl" />, label: 'Wood Press Oils' },
+  { icon: <GiHoneyJar className="text-primary text-2xl" />, label: 'Natural Sweetener' },
+  { icon: <FaLeaf className="text-primary text-2xl" />, label: 'Stone Ground Spices' },
+  { icon: <FaSeedling className="text-primary text-2xl" />, label: 'Organic Pulses' },
+  { icon: <FaCookieBite className="text-primary text-2xl" />, label: 'Healthy & Tasty Snacks' },
 ]
 
 const connectLinks = [
@@ -40,7 +40,7 @@ export const Header = () => {
   return (
     <header className="w-full">
       {/* Top bar */}
-      <div className="bg-teal-900 text-white text-center py-2 text-sm font-semibold">
+      <div className="bg-primary text-white text-center py-2 text-sm font-semibold">
         Get Free delivery on order above Rs 700 within India!
       </div>
       {/* Main header */}
@@ -67,7 +67,7 @@ export const Header = () => {
               <div className="absolute left-0 mt-0 w-[700px] bg-white shadow-lg rounded-lg p-8 flex gap-12 z-30 border-gray-100 min-h-[320px] opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity">
                 <div className="flex-1 flex flex-col gap-6">
                   {categories.slice(0, 6).map((cat, idx) => (
-                    <div key={idx} className="flex items-center gap-4 hover:text-teal-900 cursor-pointer">
+                    <div key={idx} className="flex items-center gap-4 hover:text-primary cursor-pointer">
                       <span className="flex items-center justify-center w-10 h-10 border rounded-full">{cat.icon}</span>
                       <span className="text-base">{cat.label}</span>
                     </div>
@@ -75,7 +75,7 @@ export const Header = () => {
                 </div>
                 <div className="flex-1 flex flex-col gap-6">
                   {categories.slice(6).map((cat, idx) => (
-                    <div key={idx} className="flex items-center gap-4 hover:text-teal-900 cursor-pointer">
+                    <div key={idx} className="flex items-center gap-4 hover:text-primary cursor-pointer">
                       <span className="flex items-center justify-center w-10 h-10 border rounded-full">{cat.icon}</span>
                       <span className="text-base">{cat.label}</span>
                     </div>
@@ -83,9 +83,9 @@ export const Header = () => {
                 </div>
               </div>
             </div>
-            <a href="#" className="hover:text-teal-900">About</a>
-            <a href="#" className="hover:text-teal-900">Ayurvedic Remedies</a>
-            <a href="#" className="hover:text-teal-900">Blog</a>
+            <a href="#" className="hover:text-primary">About</a>
+            <a href="#" className="hover:text-primary">Ayurvedic Remedies</a>
+            <a href="#" className="hover:text-primary">Blog</a>
             {/* Connect with Dropdown */}
             <div className="relative group">
               <div className="flex items-center gap-1 cursor-pointer select-none">
@@ -93,7 +93,7 @@ export const Header = () => {
               </div>
               <div className="absolute left-1/2 -translate-x-1/2 mt-0 w-48 bg-white shadow-lg rounded-lg py-6 px-6 flex flex-col gap-4 z-30 border-gray-100 text-center opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity">
                 {connectLinks.map((link, idx) => (
-                  <a key={idx} href="#" className="text-gray-700 hover:text-teal-900 text-lg cursor-pointer">{link}</a>
+                  <a key={idx} href="#" className="text-gray-700 hover:text-primary text-lg cursor-pointer">{link}</a>
                 ))}
               </div>
             </div>

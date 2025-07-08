@@ -34,7 +34,7 @@ const Banner = () => {
         <span>🎁 Get 7% off on your first order - FIRSTPURE7</span>
       </div>
       {/* Banner Carousel */}
-      <div className="relative w-full flex items-center justify-center" style={{background: '#f5f5ef', minHeight: '420px'}}>
+      <div className="relative w-full max-w-7xl mx-auto flex items-center justify-center" style={{background: '#f5f5ef', minHeight: '420px'}}>
         {/* Left Arrow */}
         <button onClick={prevBanner} className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary text-white rounded-full p-2 shadow-lg z-10 hidden md:block">
           &#8592;
@@ -48,7 +48,7 @@ const Banner = () => {
         <img
           src={banners[current]}
           alt={`Banner ${current + 1}`}
-          className="rounded-2xl shadow-lg object-cover w-[90vw] max-w-5xl h-[350px] md:h-[420px] hidden md:block transition-all duration-700"
+          className="rounded-2xl shadow-lg object-cover w-[99vw] max-w-7xl h-[350px] md:h-[420px] hidden md:block transition-all duration-700"
         />
         {/* Right Arrow */}
         <button onClick={nextBanner} className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary text-white rounded-full p-2 shadow-lg z-10 hidden md:block">
