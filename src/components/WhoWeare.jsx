@@ -46,8 +46,22 @@ const articles = [
 
 const WhoWeare = () => {
   const [reviewIndex, setReviewIndex] = React.useState(0);
-  const [autoScroll, setAutoScroll] = React.useState(false);
+  const [visibleCount, setVisibleCount] = React.useState(3);
   const intervalRef = React.useRef(null);
+
+  React.useEffect(() => {
+    // Responsive: 1 review on mobile, 3 on md+
+    const checkScreen = () => {
+      if (window.innerWidth < 768) {
+        setVisibleCount(1);
+      } else {
+        setVisibleCount(3);
+      }
+    };
+    checkScreen();
+    window.addEventListener('resize', checkScreen);
+    return () => window.removeEventListener('resize', checkScreen);
+  }, []);
 
   const prevReview = () => {
     setReviewIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
@@ -58,22 +72,23 @@ const WhoWeare = () => {
   };
 
   React.useEffect(() => {
-    if (autoScroll) {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    if (visibleCount > 1) {
       intervalRef.current = setInterval(() => {
         setReviewIndex((prev) => (prev + 1) % reviews.length);
       }, 2500);
-    } else if (intervalRef.current) {
-      clearInterval(intervalRef.current);
     }
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [autoScroll]);
+  }, [reviewIndex, visibleCount]);
 
-  // Helper to get 3 visible reviews, wrapping around
+  // Helper to get N visible reviews, wrapping around
   const getVisibleReviews = () => {
     const visible = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < visibleCount; i++) {
       visible.push(reviews[(reviewIndex + i) % reviews.length]);
     }
     return visible;
@@ -129,7 +144,7 @@ const WhoWeare = () => {
           Let customers speak for us
           <div className="text-xs font-normal text-gray-500">from 5508 reviews</div>
         </div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 flex-wrap">
           {/* Left Arrow */}
           <button
             onClick={prevReview}
@@ -138,7 +153,7 @@ const WhoWeare = () => {
           >
             <FaChevronLeft />
           </button>
-          {/* 3 Review Cards */}
+          {/* N Review Cards */}
           {getVisibleReviews().map((review, idx) => (
             <div
               key={idx}
