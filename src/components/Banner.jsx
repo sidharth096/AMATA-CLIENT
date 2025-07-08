@@ -43,7 +43,7 @@ const Banner = () => {
         <img
           src={bannersMobile[current]}
           alt={`Banner ${current + 1} mobile`}
-          className="rounded-2xl shadow-lg object-cover w-[90vw] max-w-5xl h-[180px] xs:h-[220px] sm:h-[260px] block md:hidden transition-all duration-700"
+          className="rounded-2xl shadow-lg object-cover w-[90vw] max-w-5xl h-[320px] block md:hidden transition-all duration-700"
         />
         <img
           src={banners[current]}
