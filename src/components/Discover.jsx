@@ -131,12 +131,6 @@ const Discover = () => {
         </div>
         {/* Shop All Button */}
         <button className="px-8 py-2 bg-primary text-white rounded-lg font-bold text-sm tracking-wide shadow hover:bg-teal-800 transition-colors">SHOP ALL</button>
-        {/* Custom primary color utility */}
-        <style>{`
-          .text-primary { color: #134e4a !important; }
-          .bg-primary { background-color: #134e4a !important; }
-          .border-primary { border-color: #134e4a !important; }
-        `}</style>
       </div>
     </section>
   )

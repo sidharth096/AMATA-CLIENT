@@ -121,14 +121,14 @@ const WhoWeare = () => {
       </div>
 
       {/* Slanted Divider */}
-      <div className="w-full h-12 -mt-2" style={{ background: "linear-gradient(105deg, #ffffff 60%, #134e4a 0)" }} />
+      <div className="w-full h-12 -mt-2" style={{ background: "linear-gradient(105deg, #ffffff 60%, #472b29 0)" }} />
 
       {/* Features Row */}
-      <div className="bg-[#134e4a] py-12">
+      <div className="bg-primary py-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
           {features.map((f, idx) => (
             <div key={idx} className="flex flex-col items-center text-center text-yellow-200 w-40">
-              <div className="bg-yellow-200 text-[#134e4a] rounded-full w-14 h-14 flex items-center justify-center mb-3 shadow-lg">
+              <div className="bg-yellow-200 text-primary rounded-full w-14 h-14 flex items-center justify-center mb-3 shadow-lg">
                 {f.icon}
               </div>
               <span className="text-xs font-semibold text-yellow-200">{f.label}</span>

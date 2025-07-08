@@ -55,7 +55,7 @@ export const Header = () => {
             <FaBars />
           </button>
           {/* Logo */}
-          <div className="flex-1 flex items-center justify-center lg:justify-start">
+          <div className="flex-1  flex items-center justify-center lg:justify-start">
             <img src={logo} alt="Logo" className="h-14 w-14 rounded-full border shadow" />
           </div>
           {/* Desktop Navigation */}

@@ -48,13 +48,13 @@ const Footer = () => {
             <a href="tel:+919099909453" className="underline text-gray-700 hover:text-primary">+91-9099909453</a>
           </div>
           <div className="flex gap-4 mt-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-[#134e4a] text-white rounded-full p-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="bg-primary text-white rounded-full p-2">
               <FaFacebookF />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-[#134e4a] text-white rounded-full p-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-primary text-white rounded-full p-2">
               <FaInstagram />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-[#134e4a] text-white rounded-full p-2">
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="bg-primary text-white rounded-full p-2">
               <FaYoutube />
             </a>
           </div>

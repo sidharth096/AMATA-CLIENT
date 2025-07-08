@@ -82,15 +82,6 @@ const Banner = () => {
           min-width: 200%;
           animation: marquee 18s linear infinite;
         }
-        .bg-primary {
-          background-color: #134e4a !important;
-        }
-        .text-primary {
-          color: #134e4a !important;
-        }
-        .border-primary {
-          border-color: #134e4a !important;
-        }
       `}</style>
     </div>
   )
