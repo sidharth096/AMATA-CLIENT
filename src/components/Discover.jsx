@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import product from '../assets/products/product.jpg'
+import { FaHeart } from "react-icons/fa6";
 
 const products = [
   {
     id: 1,
     name: 'Pure & Organic A2 Gir Cow Ghee',
-    image: 'https://cdn.shopify.com/s/files/1/0552/4564/0486/files/ghee.png',
+    image: product,
     badge: 'Best Seller',
     save: '7%',
     coins: 2517,
@@ -18,7 +20,7 @@ const products = [
   {
     id: 2,
     name: 'Wood Pressed Groundnut Oil',
-    image: 'https://cdn.shopify.com/s/files/1/0552/4564/0486/files/groundnut-oil.png',
+    image: product,
     badge: 'Best Seller',
     save: '33%',
     coins: 795,
@@ -32,7 +34,7 @@ const products = [
   {
     id: 3,
     name: 'Sharbati Wheat Atta',
-    image: 'https://cdn.shopify.com/s/files/1/0552/4564/0486/files/atta.png',
+    image: product,
     badge: 'Best Seller',
     save: '4%',
     coins: 2010,
@@ -46,7 +48,7 @@ const products = [
   {
     id: 4,
     name: 'Raw Jaggery Powder',
-    image: 'https://cdn.shopify.com/s/files/1/0552/4564/0486/files/jaggery.png',
+    image: product,
     badge: 'Best Seller',
     save: '12%',
     coins: 660,
@@ -112,7 +114,7 @@ const Discover = () => {
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-2">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} className={i < product.rating ? 'text-yellow-400' : 'text-gray-300'}>❤️</span>
+                    <span key={i} className={i < product.rating ? 'text-yellow-400' : 'text-gray-300'}><FaHeart/></span>
                   ))}
                   <span className="ml-2 text-gray-500 text-xs font-medium">{product.ratingCount}</span>
                 </div>
@@ -122,7 +124,7 @@ const Discover = () => {
                   <span className="text-lg font-bold text-primary">Rs. {product.price}.00</span>
                 </div>
                 {/* Add to Cart */}
-                <button className="mt-auto px-4 py-2 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">ADD TO CART</button>
+                <button className="mt-auto px-4 py-2 border-2 border-primary text-teal-900 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">ADD TO CART</button>
               </div>
             </div>
           ))}
