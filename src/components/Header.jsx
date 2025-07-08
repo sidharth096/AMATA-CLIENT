@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { FaUser, FaShoppingCart, FaSearch, FaRupeeSign, FaSeedling, FaCookieBite, FaLeaf, FaBars, FaTimes, FaBookOpen, FaShoppingBag, FaFileAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa'
 import { GiCow, GiMilkCarton, GiWheat, GiPeanut, GiOlive, GiHoneyJar } from 'react-icons/gi'
-import logo from '../assets/react.svg'
+import logo from '../assets/logo.jpg'
 
 const categories = [
   { icon: <GiCow className="text-teal-900 text-2xl" />, label: 'All Products' },
