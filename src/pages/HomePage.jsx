@@ -4,6 +4,7 @@ import Banner from '../components/Banner'
 import Discover from '../components/Discover'
 import About from '../components/About'
 import WhoWeare from '../components/WhoWeare'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
     <Discover/>
     <About/>
     <WhoWeare/>
+    <Footer/>
     </>
   )
 }
